@@ -23,8 +23,9 @@ if Start_Input == 1:
         if guess_counter == Number_of_chances - 1:
             print("⚠️ This is your last chance!")
         if my_guess == The_number_to_guess:
+            win = True
             print(f"Wowwww u won in {guess_counter}th guess🥳🥳🥳")
-            break 
+            break
         elif my_guess < The_number_to_guess:
             print("You guessed low, guess somewhat higher number")
         elif my_guess > The_number_to_guess:
@@ -32,7 +33,7 @@ if Start_Input == 1:
         else:
             print("enter a valid number")
     
-    if Number_of_chances == guess_counter:
+    if Number_of_chances == guess_counter and win == False:
         print("Opps you lost😔.... Bettter luck next time")
         print(f"The correct number is {The_number_to_guess}")
 elif Start_Input == 0:
